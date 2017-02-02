@@ -2479,6 +2479,13 @@
         "runtime": {
           "lib/netstandard1.1/xunit.runner.utility.dotnet.dll": {}
         }
+      },
+      "CodingChallenge.PirateSpeak/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.0",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.0.0"
+        }
       }
     }
   },
@@ -7461,10 +7468,15 @@
         "xunit.runner.utility.2.2.0-beta2-build3300.nupkg.sha512",
         "xunit.runner.utility.nuspec"
       ]
+    },
+    "CodingChallenge.PirateSpeak/1.0.0": {
+      "type": "project",
+      "path": "../CodingChallenge.PirateSpeak/project.json"
     }
   },
   "projectFileDependencyGroups": {
     "": [
+      "CodingChallenge.PirateSpeak >= 1.0.0",
       "dotnet-test-xunit >= 2.2.0-preview2-build1029",
       "xunit >= 2.2.0-beta2-build3300"
     ],

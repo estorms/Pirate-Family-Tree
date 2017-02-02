@@ -1,6 +1,6 @@
-﻿using Given.Common;
-using Xunit;
-
+﻿using Xunit;
+using System.Linq;
+using CodingChallenge.PirateSpeak;
 namespace CodingChallenge.PirateSpeak.Tests
 {
     public class PirateSpeakTests
@@ -12,10 +12,10 @@ namespace CodingChallenge.PirateSpeak.Tests
         [InlineData("ainstuomn", new[] { "mountains", "hills", "mesa" }, new[] { "mountains" })]
         [InlineData("oopl", new[] { "donkey", "pool", "horse", "loop" }, new[] { "pool", "loop" })]
         [InlineData("oprst", new[] {"sport", "ports", "ball", "bat", "port"}, new[] {"sport", "ports"})]
-        public void TestPirateVocabulary(string jumble, string[] dictionary, object expectedResult)
+        public void TestPirateVocabulary(string jumble, string[] dictionary, string[] expectedResult)
         {
-            var actualResult = new Solution().GetPossibleWords(jumble, dictionary);
-            actualResult.ShouldBeTheSameAs(expectedResult);
+            var actualResult = new CodingChallenge.PirateSpeak.Solution().GetPossibleWords(jumble, dictionary);
+            Assert.True(actualResult.SequenceEqual(expectedResult));
         }
     }
 }
