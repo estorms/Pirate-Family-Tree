@@ -38,4 +38,4 @@ namespace CodingChallenge.PirateSpeak
             throw new ArgumentException();
         }
     }
-}
+}}
