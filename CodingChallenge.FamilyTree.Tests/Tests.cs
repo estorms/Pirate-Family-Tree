@@ -1,4 +1,4 @@
-﻿using Given.Common;
+﻿// using Given.Common;
 using Xunit;
 
 namespace CodingChallenge.FamilyTree.Tests
@@ -12,7 +12,7 @@ namespace CodingChallenge.FamilyTree.Tests
         {
             var tree = FamilyTreeGenerator.Make();
             var result = new Solution().GetBirthMonth(tree, "Joe");
-            result.ShouldEqual("January");
+            Assert.Equal(result, "January");
         }
            
         [Theory]
@@ -20,7 +20,7 @@ namespace CodingChallenge.FamilyTree.Tests
         {
             var tree = FamilyTreeGenerator.Make();
             var result = new Solution().GetBirthMonth(tree, "Ted");
-            result.ShouldEqual("May");
+            Assert.Equal(result, "May");;
         }
 
         [Theory]
@@ -28,7 +28,7 @@ namespace CodingChallenge.FamilyTree.Tests
         {
             var tree = FamilyTreeGenerator.Make();
             var result = new Solution().GetBirthMonth(tree, "Jeebus");
-            result.ShouldEqual("");
+             Assert.Equal(result, "");
         }
     }
 }

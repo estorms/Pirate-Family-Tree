@@ -13,6 +13,7 @@ namespace CodingChallenge.FamilyTree
         public string Name { get; set; }
         public List<Person> Descendants { get; set; }
         public DateTime Birthday { get; set; }
+
     }
 
     public static class FamilyTreeGenerator
